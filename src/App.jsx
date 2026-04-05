@@ -22,6 +22,7 @@ function App() {
     else setLeader("No one");
   }, [c1, c2, c3]);
 
+  // Reset
   const handleReset = () => {
     setC1(0);
     setC2(0);
@@ -30,10 +31,18 @@ function App() {
     localStorage.clear();
   };
 
+  // Images
   const images = {
     "Candidate 1": "/profile.jpg",
     "Candidate 2": "/emp6.png",
     "Candidate 3": "/brain.jpg"
+  };
+
+  // ✅ NEW: Percentage logic
+  const total = c1 + c2 + c3;
+
+  const getPercent = (votes) => {
+    return total === 0 ? 0 : ((votes / total) * 100).toFixed(1);
   };
 
   return (
@@ -52,6 +61,7 @@ function App() {
       <div className="candidates-container">
         {["Candidate 1", "Candidate 2", "Candidate 3"].map((name, index) => {
           const votes = [c1, c2, c3][index];
+
           return (
             <div
               key={name}
@@ -59,7 +69,17 @@ function App() {
             >
               <img src={images[name]} alt={name} />
               <h4>{name}</h4>
+
               <p>Votes: {votes}</p>
+              <p>{getPercent(votes)}%</p>
+
+              {/* Progress Bar */}
+              <div className="progress-bar">
+                <div
+                  className="progress-fill"
+                  style={{ width: `${getPercent(votes)}%` }}
+                ></div>
+              </div>
             </div>
           );
         })}
@@ -69,7 +89,10 @@ function App() {
       <h3>Current Leader: {leader}</h3>
 
       {leader !== "No one" && (
-        <img src={images[leader]} alt={leader} className="leader-image" />
+        <>
+          <h3 style={{ color: "gold" }}>🏆 {leader} is leading!</h3>
+          <img src={images[leader]} alt={leader} className="leader-image" />
+        </>
       )}
     </div>
   );
