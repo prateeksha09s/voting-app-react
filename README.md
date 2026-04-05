@@ -37,27 +37,3 @@ npm run dev
 <img width="1881" height="997" alt="Screenshot 2026-04-05 124541" src="https://github.com/user-attachments/assets/c688f266-de47-46eb-945a-f76bbbcc22a7" />
 
 
-👉 Click **Commit changes**
-
----
-
-# 🔥 Now your GitHub is RESUME-LEVEL
-
-✔ Professional  
-✔ Recruiter-friendly  
-✔ Clean documentation  
-
----
-
-# 🚀 NEXT STEP (VERY IMPORTANT)
-
-Now your project is on GitHub  
-👉 Next = make it LIVE 🌐
-
-Say:
-👉 **“deploy my project”**
-
-I’ll help you:
-- Host it on Netlify/Vercel  
-- Add link to resume  
-- Make it **Amazon-level portfolio project** 🔥
