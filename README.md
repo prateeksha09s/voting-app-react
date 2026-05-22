@@ -29,6 +29,10 @@ If you are developing a production application, we recommend using TypeScript wi
 - src/ → Components & Logic
 - public/ → Images & Assets
 
+## Screenshot 
+<img width="1562" height="938" alt="Screenshot 2026-05-22 132023" src="https://github.com/user-attachments/assets/6bb71934-1c44-498f-8e2b-75d161a0da03" />
+
+
 ## ▶️ Run Locally
 ```bash
 npm install
